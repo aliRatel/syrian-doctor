@@ -2,13 +2,15 @@
 
     <div class="card medical-card">
 
-        <img src="/images/heart1.jpg" class="medical-card-image ">
+        <img src="{{ url('storage/'.$article->image) }}" class="medical-card-image ">
+        @can('admin')
         <span class="row medical-control-set d-flex justify-content-center ">
             <button class=" medical-control-set-btn medical-btn-edit" onclick="window.location='{{route('edit-article',['id'=>$article->id])}}'"></button>
             <button class=" medical-control-set-btn  medical-btn-delete" onclick="var x = confirm('asfdasdf');
             if(x==true){ window.location='{{URL::to('/articles/destroy/'.$article->id)}}'  }" ></button>
 
         </span>
+        @endcan
         <div class="container mx-2 my-1 text-center" style="height: 160px">
 
                 <h3 style="

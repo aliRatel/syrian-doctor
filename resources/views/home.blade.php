@@ -19,9 +19,9 @@
 
                 <h3>Join Us Now</h3>
                     <button type="button"
-                    class="btn btn-outline-dark btn-lg ">{{ __('auth.Login') }}</button>
+                    class="btn btn-outline-dark btn-lg " onclick="window.location='{{ route('login') }}'">{{ __('auth.Login') }}</button>
                 <button type="button"
-                    class="btn btn-primary btn-lg ">{{ __('auth.Register') }}</button>
+                    class="btn btn-primary btn-lg " onclick="window.location='{{ route('register') }}'">{{ __('auth.Register') }}</button>
                     @endguest
                     @auth
                     <h3>Welcome  {{ Auth::user()->name }}</h3>
@@ -87,7 +87,7 @@
                 <h3>Articles</h3>
                 <p>read our latest articles</p>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4" style="cursor: pointer;" onclick="window.location='{{ route('Articles') }}'">
+            <div class="col-xs-12 col-sm-6 col-md-4" style="cursor: pointer;" onclick="window.location='{{ route('Deits') }}'">
                 <i class="fas fa-apple-alt"></i>
                 <h3>Deits</h3>
                 <p>discover our most effective deits</p>

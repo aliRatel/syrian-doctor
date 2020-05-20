@@ -9,8 +9,9 @@
             @include('medical_card',['article'=>$article])
                   @endforeach
         </div>
-
+@can('admin')
         <div class="my-fab" onclick="window.location='{{ route('create-article') }}'"> + </div>
+        @endcan
     </div>
     </div>
     @endsection

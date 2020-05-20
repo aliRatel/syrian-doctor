@@ -7,18 +7,19 @@ img {
 }
 
 .recipe-card {
+    // @include border-top-radius(5px);
+	// @include border-bottom-radius(5px);
 	background: #fff;
 	margin: 4em auto;
 	width: 90%;
 	max-width: 496px;
-	@include border-top-radius(5px);
-	@include border-bottom-radius(5px);
+
 
 	aside {
 		position: relative;
 
 		img {
-            @include border-top-radius(5px);
+            // @include border-top-radius(5px);
             height: 200px;
             width: 100%;
 		}

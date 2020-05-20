@@ -39,6 +39,8 @@ class DeitsController extends Controller
             $deit->image=$path;
 
 
+        }else{
+            $deit->image='deits/oatmeal.jpg';
         }
 
         error_log($request->name);

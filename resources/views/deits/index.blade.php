@@ -11,8 +11,9 @@
 
 
         </div>
-
+@can('admin')
         <div class="my-fab" onclick="window.location='{{ route('create-deit') }}'"> + </div>
+        @endcan
     </div>
     </div>
     @endsection

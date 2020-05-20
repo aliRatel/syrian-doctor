@@ -21,9 +21,11 @@
                             content</label>
                         <textarea id="content"  class="form-control" name="content" rows="10" cols = "20" autofocus placeholder="enter Deit content" required=true></textarea>
                     </div>
-
+<div class="form-group row">
+    <label for="img" style="color:black;" class="row-md-4 col-form-label text-md-right ">Deit
+        Image</label>
                         <input id="img"  class="form-control" type="file" name="img" accept="image/jpeg">
-
+</div>
 
                     <div class="form-group row">
 

@@ -1,12 +1,14 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
-@import url("https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css");
-
+//@import url("https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css");
+@import "~bootstrap/scss/bootstrap";
 @import 'main';
 
-
+@import 'footer';
+@import 'fixes';
+@import 'deit_card';

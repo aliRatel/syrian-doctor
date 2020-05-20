@@ -1,11 +1,128 @@
-body {
+html,body {
+
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background-image: url('images/61802.jpg');
+    width:100%;
+    font-family: Poppins, sans-serif;
+    color: #222;
+
+   // background-image: url('images/61802.jpg');
     background-size: cover;
+    position: relative;
+}
+html{height: 100%;}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.navbar{
+    padding: .8rem;
+}
+.navbar li{
+    padding-right: 20px;
 }
 
+.nav-link{
+    font-size: 1.1em !important;
+}
+
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.carousel-caption{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption h1{
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px black;
+}
+.carousel-caption h3{
+    font-size: 200%;
+    font-weight: 500;
+padding-bottom: 1rem;
+    text-shadow: 1px 1px 10px black;
+}
+
+
+.btn-primary{
+
+    border: 1px solid #217ac3;
+}
+
+.jumbotron{
+    padding:1rem;
+    border-radius: 0;;
+}
+
+.padding{
+    padding-bottom: 2rem;
+}
+.welcome{
+    width: 75%;
+    //to center text
+    margin: 0 auto;
+    padding-top: 2rem;;
+}
+.welcome hr{
+    border-top: solid 2px #b4b4b4;
+    width: 95%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+//icons
+.fa-newspaper{
+color: pink;
+}
+.fa-apple-alt{
+color: chartreuse;
+}
+.fa-question{
+color: orange;
+}
+.fa-question,.fa-apple-alt,.fa-newspaper{
+    font-size: 4em;
+    margin: 1rem;
+}
+
+
+footer {
+    background-color: #3f3f3f;
+    color:#d5d5d5;
+    padding-top: 2rem;
+
+}
+footer img{
+    height: 50px;
+    width: 50px;
+}
+
+
+
+hr.light{
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+}
+footer a {
+    color: #d5d5d5;
+    text-decoration: none;
+    padding-top: 2rem;
+
+}
+footer a:hover
+{
+     color:#ffffff;
+     text-decoration:none;
+     cursor:pointer;
+}
 .centered-text {
     text-align: center;
 }
@@ -15,7 +132,6 @@ body {
     background: rgba(255, 255, 255, 0.479);
     color: white;
     left: 50%;
-    position: absolute;
     transform: translate(-50%, 0);
     padding-top: 70px;
     margin-top: 70px;
@@ -41,7 +157,6 @@ h1 {
 .medical-card {
     width: 300px;
     height: 550px;
-    position: absolute;
     background-color: #f1eded;
     border-radius: 5px 20px 5px;
     margin: 0;
@@ -49,9 +164,10 @@ h1 {
   }
 
   .medical-card-image {
-    width: 300px;
+    width: 298px;
     height: 300px;
-    border-radius: 5px 20px 5px 5px;
+    background-size: contain;
+    border-radius: 5px 20px 0px 0px;
     margin-bottom: 10px;
     background-color: white;
   }
@@ -59,23 +175,19 @@ h1 {
   .medical-card-btn {
     width: 100%;
 
-    height: 60px;
+    height: 67px;
     border-radius: 5px 5px 5px 20px;
     padding: 0;
-    margin: 0;
+    margin-top: 3px;
     transition-duration: 0.4s;
   }
 
-  .medical-card-btn:hover {
-    background-color: gray;
-    /* Green */
-    color: blue;
-  }
+
 
   .medical-control-set {
     background-color: rgba(255, 255, 255, 0.102);
     width: 40%;
-    transform: translate(5%, 650%);
+    transform: translate(7%, 640%);
     position: absolute;
   }
 
@@ -108,3 +220,41 @@ h1 {
     border-color: transparent !important;
     outline: none;
   }
+
+
+  .my-fab {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(92, 255, 92, 0.863);
+    border-radius: 50%;
+    box-shadow: 0 6px 10px 0 #666;
+    transition: all 0.1s ease-in-out;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    position: sticky;
+    float: right;
+    bottom: 100px;
+    margin-bottom: 15px;
+  }
+
+ .my-fab:hover {
+    box-shadow: 0 6px 14px 0 #666;
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: rgba(33, 241, 33, 0.863);
+    color: white;
+
+ }
+ .my-h1{
+    color: #444;
+    margin: 0;
+    padding: 0px 0px 6px 0px;
+    font-size: 51px;
+    line-height: 44px;
+    letter-spacing: -2px;
+    font-weight: 30px;
+}
+
+

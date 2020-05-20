@@ -1,22 +1,44 @@
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 ">
 
-<div class="container col-lg-4 d-flex justify-content-center">
-    <div class="card category-card col  ">
-        <div class="row d-flex justify-content-center">
-            <img src="/images/heart1.jpg" class="medical-card-image ">
-        </div>
-        <div class="row medical-control-set d-flex justify-content-center ">
-            <button class=" control-set-btn medical-btn-edit"  ></button>
-            <button class=" control-set-btn  medical-btn-delete" ></button>
+    <div class="card medical-card">
+
+        <img src="/images/heart1.jpg" class="medical-card-image ">
+        <span class="row medical-control-set d-flex justify-content-center ">
+            <button class=" medical-control-set-btn medical-btn-edit" onclick="window.location='{{route('edit-article',['id'=>$article->id])}}'"></button>
+            <button class=" medical-control-set-btn  medical-btn-delete" onclick="var x = confirm('asfdasdf');
+            if(x==true){ window.location='{{URL::to('/articles/destroy/'.$article->id)}}'  }" ></button>
+
+        </span>
+        <div class="container mx-2 my-1 text-center" style="height: 160px">
+
+                <h3 style="
+                font-size: em(13);
+                font-weight: 400;
+                color: #222222;
+                word-wrap: break-word;
+                max-height: 7em;
+                line-height: 1.8em;
+                text-overflow: ellipsis;
+                height: 40px;
+                overflow: hidden;"> {{$article->topic}}</h3>
+
+
+                <h6> {{$article->created_at}}</h6>
+
+                <p style="                 margin: 1.25em 0;
+                font-size: em(13);
+                font-weight: 400;
+                color: #222222;
+                word-wrap: break-word;
+                max-height: 5.5em;
+                line-height: 1.8em;
+                text-overflow: ellipsis;
+                overflow: hidden; ">
+                    {{$article->description}}</p>
 
         </div>
-<div class="row d-flex justify-content-center"><h1>title</h1>
-</div>
-<div class="row d-flex justify-content-center"><h6>date</h6>
-</div>
-<div class="row d-flex justify-content-center" style="height: 100px"><p> content</p><p> content</p><p> content</p>
-</div>
-<button class="button medical-card-btn btn-primary">explore</button>
+        <button class="button medical-card-btn btn-primary " onclick="window.location='{{url('articles/'.$article->id)}}'">explore</button>
+
 
     </div>
 </div>
-

@@ -2,37 +2,41 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+
 ///////////////////////
+// Route::get('/articles/{id}','articlesController@getOne');
 
-Route::get('/articles','articlesController@index');
-Route::get('/articles/create','articlesController@create')->middleware('auth')->middleware('can:admin');
-Route::post('articles','articlesController@store')->middleware('auth')->middleware('can:admin');
-Route::get('/articles/{article}','articlesController@show');
-Route::get('/articles/{article}/edit','articlesController@edit')->middleware('auth')->middleware('can:admin');
-Route::put('/articles/{article}','articlesController@update')->middleware('auth')->middleware('can:admin');
-Route::delete('/articles/{id}','articlesController@destroy')->middleware('auth')->middleware('can:admin');
+Route::get('/articles','articlesController@index')->name('Articles');
+Route::get('/articles/create','articlesController@create')->name('create-article');
+// ->middleware('can:admin');
+Route::post('articles','articlesController@store')->name('store-article');
+Route::get('/articles/{id}','articlesController@show')->name('show-article');
+Route::get('/articles/edit/{id}','articlesController@edit')->name('edit-article');
+Route::post('/articles/{id}','articlesController@update')->name('update-article');
+Route::get('/articles/destroy/{id}','articlesController@destroy')->name('delete-article');
 
 
-Route::get('/consultations','consultationsController@index')->middleware('auth')->middleware('can:admin');
-Route::get('/consultations/create','consultationsController@create')->middleware('auth');
-Route::post('consultations','consultationsController@store')->middleware('auth');
-Route::get('/consultations/{consultation}','consultationsController@show')->middleware('auth')->middleware('can:admin');
-Route::delete('/consultations/{id}','consultationsController@destroy')->middleware('auth')->middleware('can:admin');
+Route::get('/consultations','consultationsController@index')->name('Consultations');;
+Route::get('/consultations/create','consultationsController@create')->name('Contact Us');
+Route::post('consultations','consultationsController@store')->name('store-consultation');
+Route::get('/consultations/{consultation}','consultationsController@show')->name('show-consultation');
+Route::get('/consultations/destroy/{id}','consultationsController@destroy')->name('delete-consultation');
+Route::get('/consultations/answer/{id}','consultationsController@answer')->name('answer-consultation');
+Route::post('/consultations/{id}','consultationsController@storeAnswer')->name('store-answer');
+
+//->middleware('auth')->middleware('can:admin')
+
+
+Route::get('/deits','DeitsController@index')->name('Deits');
+Route::get('/deits/create','DeitsController@create')->name('create-deit');
+// ->middleware('can:admin');
+Route::post('deits','DeitsController@store')->name('store-deit');
+Route::get('/deits/{id}','DeitsController@show')->name('show-deit');;
+Route::get('/deits/{id}/edit','DeitsController@edit')->name('edit-deit');;
+Route::post('/deits/{id}','DeitsController@update')->name('update-deit');;
+Route::get('/deits/destroy/{id}','DeitsController@destroy')->name('delete-deit');;

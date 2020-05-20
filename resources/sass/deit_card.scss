@@ -1,0 +1,105 @@
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+.recipe-card {
+	background: #fff;
+	margin: 4em auto;
+	width: 90%;
+	max-width: 496px;
+	@include border-top-radius(5px);
+	@include border-bottom-radius(5px);
+
+	aside {
+		position: relative;
+
+		img {
+            @include border-top-radius(5px);
+            height: 200px;
+            width: 100%;
+		}
+
+		.button {
+            background: #57abf2;
+            display: inline-block;
+            position: absolute;
+            top: 80%;
+            right: 3%;
+            width:50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 45px;
+            text-align: center;
+
+			.icon {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	article {
+		padding: 1.25em 1.5em;
+
+
+		h2, h3 {
+			margin: 0;
+			font-weight: 300;
+		}
+
+		h2 {
+			font-size: em(28);
+			color: #222222;
+		}
+
+		h3 {
+			font-size: em(15);
+			color: #838689;
+		}
+
+		p {
+
+                margin: 1.25em 0;
+                font-size: em(13);
+                font-weight: 400;
+                color: #222222;
+                word-wrap: break-word;
+                max-height: 7em;
+                line-height: 1.8em;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
+			span {
+				font-weight: 700;
+				color: #000000;
+			}
+		}
+
+
+	}
+
+	.icon {
+	    display: inline;
+	    display: inline-block;
+	    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/recipe-card-icons.svg);
+	    background-repeat: no-repeat;
+	}
+
+
+	.icon-play,.icon-play\:regular {
+	    background-position: 0 -58px;
+	    width: 21px;
+	    height: 26px;
+	}
+
+
+}
+.deit-control-set {
+    background-color: rgba(255, 255, 255, 0.102);
+    width: 40%;
+    transform: translate(3%, -110%);
+    position: absolute;
+  }
